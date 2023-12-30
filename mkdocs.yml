@@ -1,0 +1,62 @@
+site_name: DariArchive
+nav:
+  - Home: 'index.md'
+  - 'MkDocs':
+      - '環境構築': 'mkdocs/mkdocs.md'
+  - 'Python':
+      - 'インストール': 'python/python_install.md'
+  - 'Writerside':
+      - '基本': 'writerside/general.md'
+      - 'Git': 'writerside/git.md'
+      - 'Markdown': 'writerside/markdown.md'
+theme:
+  name: material
+  icon:
+    logo: material/library
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+repo_url: https://github.com/dariaGlint/dariarchive
+repo_name: dariaGlint/dariarchive
+plugins:
+  search:
+    lang: 'ja'
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/daria_nicht
+      name: daria on Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/dariaGlint
+      name: daria on Github
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      noclasses: true
+      pygments_style: monokai
+      linenums: true
+  - plantuml_markdown:
+      server: http://www.plantuml.com/plantuml
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+extra_css:
+  - https://unpkg.com/mermaid@8.0.0/dist/mermaid.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js
