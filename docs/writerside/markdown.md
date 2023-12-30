@@ -1,14 +1,14 @@
 # markdown
 ## 画像の追加
 相対パスの画像の追加は![]の後の()の中にカーソルを持ってきて、Ctrl+Spaceを2回押すと全体の候補が出てくる
-![](../../img/relative_image.png)
+![](../img/relative_image.png)
 
 
 ## PlantUML
 Markdownで設定するには「設定」→「言語&フレームワーク」→「Markdown」
 →「PlantUML」にチェックを入れるだけ
 
-![画像](../../img/markdown_setting_plantuml.png)
+![画像](../img/markdown_setting_plantuml.png)
 
 基本的な使い方は以下
 
@@ -21,6 +21,7 @@ Bob->Alice : Hello!
 '/
 @enduml
 ```
+
 知らなかったけどマインドマップもかけるらしい
 ```plantuml
 
