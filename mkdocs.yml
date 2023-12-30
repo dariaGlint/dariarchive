@@ -3,6 +3,7 @@ nav:
   - Home: 'index.md'
   - 'MkDocs':
       - '環境構築': 'mkdocs/mkdocs.md'
+      - '日付を導入する' :  'mkdocs/update_date.md'
   - 'Python':
       - 'インストール': 'python/python_install.md'
   - 'Writerside':
@@ -11,6 +12,7 @@ nav:
       - 'Markdown': 'writerside/markdown.md'
 theme:
   name: material
+  custom_dir: custom/
   icon:
     logo: material/library
   features:
@@ -29,19 +31,18 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-repo_url: https://github.com/dariaGlint/dariarchive
-repo_name: dariaGlint/dariarchive
 plugins:
-  search:
-    lang: 'ja'
+  - git-revision-date:
+  - search:
+      lang: 'ja'
 extra:
+  analytics:
+    provider: google
+    property: G-VEWSNBRY2F
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/daria_nicht
       name: daria on Twitter
-    - icon: fontawesome/brands/github
-      link: https://github.com/dariaGlint
-      name: daria on Github
 markdown_extensions:
   - pymdownx.highlight:
       use_pygments: true

@@ -1,5 +1,6 @@
+# MkDocs 環境構築
 
-# 環境構築
+## 環境構築
 
 mkdocsをインストールするためにbashに下記を入力
 ```Bash
@@ -28,7 +29,7 @@ Gitリポジトリ/
 pip install plantuml-markdown   #web上でplantumlを使えるようにする
 pip install pymdown-extensions  #web上でmermaidを使えるようにする
 ```
-# サイト構築
+## サイト構築
 
 準備が出来たら以下のコマンドを打つと`site`ディレクトリができて、その中に生成されたhtmlファイルが格納される
 ```Bash
@@ -44,7 +45,7 @@ http://127.0.0.1:8000/
 
 プレビューを終えたい場合はBashを開いた状態で`Ctrl+C`を押すとプレビューが解除される
 
-# Github Pagesに公開
+## Github Pagesに公開
 
 リポジトリGithub Pagesに公開する場合は、以下のbashを打つ
 ```Bash
@@ -54,7 +55,7 @@ mkdocs gh-deploy
 そうすると`Github`の`Setting`→`Pages`にブランチが追加されているので`gh-pages`ブランチが作成されているので、それに切り替えると確認できるようになる
 ![](../img/mkdocs_githubpages_gh_branch.png)
 
-# ハマったこと
+## ハマったこと
 
 mkdocs.ymlでエラーが出た時はインデントの設定が上手くできてないみたいなので、スペースとインデントはきちんと見た方がいい。
 一応`mkdocs build`で`WARNING`が出るので出たときは見直した方がいい。
@@ -81,6 +82,6 @@ theme:
 
 [configuration issue (idk wat title to put) #3222](https://github.com/squidfunk/mkdocs-material/issues/3222)
 
-# 参考
+## 参考
 [MkDocsによるドキュメント作成](https://zenn.dev/mebiusbox/articles/81d977a72cee01)
 
