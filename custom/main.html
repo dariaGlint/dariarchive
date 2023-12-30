@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block footer %}
+<hr>
+{%- if config.copyright %}
+<p>{{ config.copyright }}</p>
+{%- endif %}
+<p>{% trans mkdocs_link='<a href="https://www.mkdocs.org/">MkDocs</a>' %}Documentation built with {{ mkdocs_link }}.{% endtrans %}</p>
+{% if page and page.meta.revision_date %}
+<br><i>Updated {{ page.meta.revision_date }}</i>
+{% endif %}
+{% endblock %}
