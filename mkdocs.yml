@@ -1,6 +1,8 @@
 site_name: DariArchive
 nav:
   - Home: 'index.md'
+  - 'Github Actions':
+      - '環境構築': 'github_actions/setup.md'
   - 'MkDocs':
       - '環境構築': 'mkdocs/mkdocs.md'
       - '日付を導入する' :  'mkdocs/update_date.md'
