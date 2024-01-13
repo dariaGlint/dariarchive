@@ -1,7 +1,13 @@
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'environment'
+        required: true
+        type: choice
+        options:
+            - staging
+            - deploy
 permissions:
   actions: write
   checks: write
@@ -20,4 +26,6 @@ jobs:
       - run: pip install plantuml_markdown
       - run: pip install mkdocs-git-revision-date-plugin
       - run: mkdocs build
-      - run: mkdocs gh-deploy --force
+      - name: deploy
+        if: "${{ github.event.inputs.environment == 'deploy' }}"
+        run: mkdocs gh-deploy --force
